@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0063)https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO:: -->
+<html class="gt-ie8 gt-ie9 not-ie pxajs" lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="theme-color" content="#1946ba">
+  <meta name="yandex-tableau-widget" content="color=#1946ba">
+  <title>Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]</title>
+  <link rel="icon" href="https://isu.ifmo.ru/i/libraries/frontend/misc/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://isu.ifmo.ru/i/libraries/frontend/misc/favicon.ico" type="image/x-icon">
+  <!-- Legacy -->
+  <script type="text/javascript">
+var apex_img_dir = "/i/", htmldb_Img_Dir = apex_img_dir;
+</script>
+<script src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/desktop_all.min.js" type="text/javascript"></script>
+<script src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/legacy.min.js" type="text/javascript"></script>
+
+  <style type="text/css">
+.panel-heading 
+{
+display:none;
+
+}
+</style>
+
+  <script type="text/javascript">
+document.addEventListener('change', function (e) {
+
+    if (e.target.className.indexOf('mark-consent') >= 0) {
+
+        let id = e.target.dataset.id;
+		let sesID = e.target.dataset.sesId;
+		let mark = e.target.dataset.mark;
+        let checked = e.target.checked ? 1 : 0;
+        runAsyncAjaxRequest3({
+                process: 'SAVE_MARK_CONSENT',
+                g_param: [id, sesID, mark, checked],
+                callback: function (e) {
+                    var result = JSON.parse(e.response);
+
+                    if (result.error) {
+                        G2.notify('Ошибка! ' + result.error.message, '', true);
+
+                        return false;
+                    }
+
+                   // G2.notify(result.message);
+                }
+            }); 
+    } 
+
+}, true);
+
+
+</script>
+  
+  
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/pk_transfer.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/counter.js"></script>
+
+  <!-- / Legacy -->
+  <!-- Fonts -->
+  <link href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/fonts.css" rel="stylesheet" type="text/css">
+  <!-- / Fonts -->
+  <!-- Framework -->
+  <link href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/pixel-admin.min.css" rel="stylesheet" type="text/css">
+  <link href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/widgets.min.css" rel="stylesheet" type="text/css">
+  <link href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/pages.min.css" rel="stylesheet" type="text/css">
+  <link href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/rtl.min.css" rel="stylesheet" type="text/css">
+  <link href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/themes.min.css" rel="stylesheet" type="text/css">
+
+  <!--[if lt IE 9]>
+    <script src="/i/libraries/frontend/pixeladmin/assets/javascripts/ie.min.js"></script>
+  <![endif]-->
+    
+  <!-- / Framework -->
+
+  <!-- APEX -->
+  
+
+
+  <!-- / APEX -->
+
+  <!-- ISU -->
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/ajax.js"></script>
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/prepare.js"></script>
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/override.js"></script>
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/utils.js"></script>
+  <!-- / ISU -->
+  
+  <!-- jQuery -->
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/jquery.js"></script>
+  <!-- / jQuery -->
+  <!-- Custom -->
+  <!--<link rel="stylesheet" href="/i/libraries/frontend/extra/css/custom.css" type="text/css" />-->
+  <!--<script type="text/javascript" src="/i/"></script>-->
+  <!-- / Custom -->
+<link id="commoncss" rel="stylesheet" type="text/css" href="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/style.1.1.css" media="all"><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body class="smuzy theme-isu  main-menu-animated main-navbar-fixed main-menu-fixed dont-animate-mm-content-sm" style="visibility: inherit;">
+  
+  <script>var init = [];</script>
+  
+  <form action="https://isu.ifmo.ru/pls/apex/wwv_flow.accept" method="post" name="wwv_flow" id="wwvFlowForm" novalidate="" enctype="multipart/form-data" style="opacity: 1;">
+<input type="hidden" name="p_flow_id" value="2437" id="pFlowId"><input type="hidden" name="p_flow_step_id" value="110" id="pFlowStepId"><input type="hidden" name="p_instance" value="104096665068470" id="pInstance"><input type="hidden" name="p_page_submission_id" value="112975216102899" id="pPageSubmissionId"><input type="hidden" name="p_request" value="" id="pRequest"><input type="hidden" name="p_arg_names" value="5516006872063204122"><input type="hidden" name="p_t01" id="WFAPPNM" value="100000"><input type="hidden" name="p_arg_checksums" value="5516006872063204122_57605FA47735713F25C2CAAB79B7E758"><input type="hidden" name="p_arg_names" value="6686286891748309792"><input type="hidden" name="p_t02" id="USER_ID" value="311697"><input type="hidden" name="p_arg_checksums" value="6686286891748309792_9C824F357A514571B41F8092FFDDCDF9"><input type="hidden" name="p_arg_names" value="6686576207807342312"><input type="hidden" name="p_t03" id="USER_FIO" value="[311697] Скакун А.А."><input type="hidden" name="p_arg_checksums" value="6686576207807342312_188E8188DE62897BC4503CE7EB170A9A"><label for="LIBS" class="hide"></label><span id="LIBS" class="display_only"><style type="text/css">@import url("/i/libraries/frontend/extra/css/apex.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/Control.OSMGeocoder.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/custom.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/formValidation.min.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/geosearch-beta.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/intro-extra.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/ir.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/jquery.minimalect2.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/leaflet.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/leaflet.label.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/leaflet.magnifyingglass.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/leaflet-routing-machine.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/loading.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/map_plugin.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/MarkerCluster.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/MarkerCluster.Default.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/override.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/select2-bootstrap.min.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/shuttle.css");</style>
+<style type="text/css">@import url("/i/libraries/frontend/extra/css/wizard-static.css");</style>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/apex_bootstrpapped.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/dropzone2.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/formValidation.min.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/handlebars.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/infinite_report.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/interactive_bind.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/ir_scrolltable.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/jquery.minimalect2.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/jszip.min.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/mustache.min.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/scrolltables.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/wizard.js"></script></span><input type="hidden" name="p_arg_names" value="5835128078483868126"><input type="hidden" name="p_t04" id="USER_AVA" value="f?p=2437:0:104096665068470:AVATAR:NO::T_UID:311697"><input type="hidden" name="p_arg_checksums" value="5835128078483868126_2BDE2652D33C80761067207095EBB39C"><input type="hidden" name="p_arg_names" value="5835132466465997142"><input type="hidden" name="p_t05" id="USER_HPK" value=""><input type="hidden" name="p_arg_checksums" value="5835132466465997142_B2C0FB6960F8B5F2F8672CCABAD93954"><label for="F50SEARCH" class="hide"></label><div class="hide"></div><input type="hidden" name="p_arg_names" value="5853006653587506500"><input type="hidden" name="p_t06" id="BCKSTRY" value="/i/libraries/frontend/bg/clouds.jpeg"><input type="hidden" name="p_arg_checksums" value="5853006653587506500_89924A975513D35950B21B24BD147625"><input type="hidden" name="p_arg_names" value="5001414452210284638"><input type="hidden" name="p_t07" id="P0_DEBUG" value="0"><input type="hidden" name="p_arg_checksums" value="5001414452210284638_EBCF5ACA1E27CD5F91E6D40DFBBC77A8"><input type="hidden" name="p_arg_names" value="5001438832348695276"><input type="hidden" name="p_t08" id="P0_USER_ID" value="311697"><input type="hidden" name="p_arg_checksums" value="5001438832348695276_9C824F357A514571B41F8092FFDDCDF9"><input type="hidden" name="p_arg_names" value="5068467536247115805"><input type="hidden" name="p_t09" id="P0_STAT_QUAL_URL" value="https://isu.ifmo.ru/pls/apex/f?p=2110:3:104096665068470::NO:0,3:P0_PARENT_APP_ID,P0_PARENT_PAGE_ID:2437,110"><input type="hidden" name="p_arg_checksums" value="5068467536247115805_2CBB13971B9F1DA2811A4FA7875E9E22"><input type="hidden" name="p_arg_names" value="4552316633608641209"><input type="hidden" name="p_t10" id="P0_OF_ID" value="2070"><input type="hidden" name="p_arg_checksums" value="4552316633608641209_A23B6C2F19EC65D230D0C3B0E7B091DC"><label for="P0_FAKE_FILE_REQ" class="hide"></label><input type="hidden" name="p_arg_names" value="4218104206932958193"><input type="file" id="P0_FAKE_FILE_REQ" name="p_t11" class="file" style="display: none;" size="30"><input type="hidden" name="p_arg_names" value="9798818014361348043"><input type="hidden" name="p_t12" id="P0_FILE_ID" value=""><input type="hidden" name="p_arg_checksums" value="9798818014361348043_B2C0FB6960F8B5F2F8672CCABAD93954"><div id="ajax-panels-holder"></div><input type="hidden" name="p_arg_names" value="8537334438331923686"><input type="hidden" name="p_t13" id="T_UID" value="311697"><input type="hidden" name="p_arg_checksums" value="8537334438331923686_9C824F357A514571B41F8092FFDDCDF9"><script type="x-tmpl-mustache" id="sys-imd-modal-tmpl" class="hide">
+    {{#visible.exists}}
+    <!--<div class="meta-contacts">
+      {{#visible.data}}
+        {{#is_text}}
+          <div class="mc-row-text">{{{annot}}}</div>
+        {{/is_text}}
+        {{#is_contact}}
+        <div class="mc-row">
+          <div class="mc-row-dep">{{{annot}}}</div>
+          <div class="mc-row-contacts">{{{contact}}}</div>
+        </div>
+        {{/is_contact}}
+      {{/visible.data}}
+    </div>-->
+    {{/visible.exists}}
+    {{#hidden.exists}}
+      <div class="modal-button-box">
+        <a href="javascript:void(0)" onclick="javascript:G2.meta();"><i class="fa fa-phone"></i> {{{hidden.button}}}</a>
+      </div>
+      <div class="modal fade meta-modal" id="sys-imd-modal">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="X"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{hidden.title}}</h4>
+            </div>
+            <div class="modal-body meta-contacts">
+              {{#hidden.data}}
+                {{#is_text}}
+                  <div class="mc-row-text">{{{annot}}}</div>
+                {{/is_text}}
+                {{#is_contact}}
+                  <div class="mc-row">
+                    <div class="mc-row-dep">{{{annot}}}</div>
+                    <div class="mc-row-contacts">{{{contact}}}</div>
+                  </div>
+                {{/is_contact}}
+              {{/hidden.data}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/hidden.exists}}
+    <div class="compatible-browsers" data-toggle="tooltip" data-placement="auto" data-container="body" title="Поддерживаемые браузеры">
+        <a class="fa fa-chrome fa-fw" href="https://www.google.ru/chrome" target="_blank"></a>
+        <a class="fa fa-edge fa-fw" href="https://www.microsoft.com/ru-ru/windows/microsoft-edge" target="_blank"></a>
+        <a class="fa fa-firefox fa-fw" href="https://www.mozilla.org/ru/firefox" target="_blank"></a>
+        <a class="fa fa-safari fa-fw" href="https://www.apple.com/ru/safari" target="_blank"></a>
+    </div>
+</script>
+<script type="x-tmpl-mustache" id="sys-imd-tmpl" class="hide">
+    {{#visible.exists}}
+    <!--<div class="meta-contacts">
+      {{#visible.data}}
+        {{#is_text}}
+          <div class="mc-row-text">{{{annot}}}</div>
+        {{/is_text}}
+        {{#is_contact}}
+        <div class="mc-row">
+          <div class="mc-row-dep">{{{annot}}}</div>
+          <div class="mc-row-contacts">{{{contact}}}</div>
+        </div>
+        {{/is_contact}}
+      {{/visible.data}}
+    </div>-->
+    {{/visible.exists}}
+    {{#hidden.exists}}
+    <div class="meta-contacts">
+      {{#hidden.data}}
+        {{#is_text}}
+          <div class="mc-row-text">{{{annot}}}</div>
+        {{/is_text}}
+        {{#is_contact}}
+        <div class="mc-row">
+          <div class="mc-row-dep">{{{annot}}}</div>
+          <div class="mc-row-contacts">{{{contact}}}</div>
+        </div>
+        {{/is_contact}}
+      {{/hidden.data}}
+    </div>
+    {{/hidden.exists}}
+</script><span id="SYSTEM_META_G2" class="display_only hide"></span>  <div id="main-wrapper">
+    <!-- Main navigation -->
+      <div id="main-navbar" class="navbar navbar-inverse" role="navigation" style="visibility: visible;">
+        <!-- Main menu toggle -->
+        <button type="button" id="main-menu-toggle" class=""><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">СКРЫТЬ МЕНЮ</span></button>
+        
+        <div class="navbar-inner">
+          <!-- Main navbar header -->
+          <div class="navbar-header">
+
+            <!-- Logo -->
+            <a href="https://isu.ifmo.ru/portal/104096665068470" class="navbar-brand">
+              <img alt="ИСУ ИТМО" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/isu.png">&nbsp;&nbsp;<span class="navbar-brand-name">ИСУ ИТМО</span>
+            </a>
+
+            <!-- Main navbar toggle -->
+            <button type="button" class="navbar-toggle collapsed user-menu" data-toggle="collapse" data-target="#main-navbar-collapse" style="height: 47px;"><img src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/u311697.jpeg"></button>
+
+          </div> <!-- / .navbar-header -->
+
+          <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+            <div>
+              <ul class="nav navbar-nav">
+                <li class="subsystem-logo">
+    			  <a href="https://isu.ifmo.ru/pls/apex/f?p=2437:99:104096665068470" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Личный кабинет" data-html="false"><span class="mm-text"><strong><span>Личный кабинет</span></strong></span></a>
+                  
+				</li>
+              </ul> <!-- / .navbar-nav -->
+
+              <div class="right clearfix">
+                <ul class="nav navbar-nav pull-right right-navbar-nav">
+                  <li><div class="navbar-form navbar-search pull-left"><input type="search" name="f50" id="f50" placeholder="Поиск ..." class="form-control"></div></li>
+                  <li class="dropdown nav-icon">
+                    <a href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#" class="user-menu dropdown-toggle" data-toggle="dropdown">
+        <img src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/u311697.jpeg"><span>[311697] Скакун А.А.</span>
+    </a><style>@media(min-width:768px){a.user-menu.dropdown-toggle{display:block;}a.user-menu.dropdown-toggle.user-menu-small{display:none;}}</style><style>@media(max-width:767px){a.user-menu.dropdown-toggle{display:none;}a.user-menu.dropdown-toggle.user-menu-small{display:block;}}</style><a href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#" class="user-menu dropdown-toggle user-menu-small" data-toggle="dropdown"><i class="glyphicon glyphicon-th"></i><span>Инструменты</span></a>
+                    <ul class="dropdown-menu">
+                      <li>
+    <a href="https://isu.ifmo.ru/apps/104096665068470">
+        <i class="dropdown-icon fa fa-fw fa-th-large"></i>&nbsp;&nbsp;<span>Центр приложений</span>
+    </a>
+</li><li>
+    <a href="https://id.itmo.ru/">
+        <i class="dropdown-icon fa fa-fw fa-cogs"></i>&nbsp;&nbsp;<span>Настройки профиля</span>
+    </a>
+</li><li>
+    <a href="https://id.itmo.ru/auth/realms/itmo/protocol/openid-connect/logout?redirect_uri=https://isu.ifmo.ru/api/sso/v1/public/logout?apex_params=logout:104096665068470:2437">
+        <i class="dropdown-icon fa fa-fw fa-sign-out"></i>&nbsp;&nbsp;<span>Выход</span>
+    </a>
+</li>
+                    </ul>
+                  </li><li>
+    
+</li>
+                </ul> <!-- / .navbar-nav -->
+              </div> <!-- / .right -->
+            </div>
+          </div> <!-- / #main-navbar-collapse -->
+        </div> <!-- / .navbar-inner -->
+      </div> <!-- / #main-navbar -->
+    <!-- / Main navigation -->
+
+    <!-- Main menu -->
+    <div id="main-menu" role="navigation">
+      <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div id="main-menu-inner" style="overflow: hidden; width: auto; height: 100%; opacity: 1;" class="">
+        <div class="menu-content top animated fadeIn show" style="padding-top: 47px; height: 100px; display: block;">
+          
+        <div class="menu-search-box"><input name="menu_search_g2" type="search" class="form-control menu-search" placeholder="Поиск по меню ..."><span class="fa fa-times" id="menu_search_g2_clear"></span></div></div>
+        <ul class="navigation">
+          
+        <li class="has-menu-icon"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:99"><i class="menu-icon fa fa-th"></i><span class="mm-text">Стартовая страница</span></a></li><li class="mm-dropdown mm-dropdown-root has-menu-icon open active"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#"><i class="menu-icon fa fa-toggle-off"></i><span class="mm-text"><span class="schet_menu" data-id="196">Образование и наука</span></span></a><ul class="mmc-dropdown-delay animated fadeInLeft"><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2143:15:104096665068470::NO::SCH,SCH_SEARCH,SCH_TYPE,SCH_WEEK,SCH_ID,SCH_FOUND:4,,1,2,,"><i class="menu-icon fa fa-calendar-alt"></i><span class="mm-text"><span class="schet_menu" data-id="197">Расписание <span class="pkz"><i class="fa fa-external-link-square"></i> </span></span></span></a></li><li class="active"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::"><i class="menu-icon fa fa-th-list"></i><span class="mm-text"><span class="schet_menu" data-id="312">Электронная зачетная книжка</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:22:104096665068470::NO::P22_LIST:1"><i class="menu-icon fa fas fa-table"></i><span class="mm-text"><span class="schet_menu" data-id="297">Учебный план</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:81:104096665068470::NO::"><i class="menu-icon fa fa fa fa-industry"></i><span class="mm-text"><span class="schet_menu" data-id="381">Практика</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:54:104096665068470::NO::"><i class="menu-icon fa fas fa-globe-europe"></i><span class="mm-text"><span class="schet_menu" data-id="299">Академическая мобильность</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:214"><i class="menu-icon fa fa-file-spreadsheet"></i><span class="mm-text"><span class="schet_menu" data-id="214">УМД<span class="pkz"><i class="fa fa-external-link-square"></i> </span></span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:69:104096665068470::NO::"><i class="menu-icon fa far fa-compass"></i><span class="mm-text"><span class="schet_menu" data-id="387">Навигатор внеучебной деятельности</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:46:104096665068470::NO::"><i class="menu-icon fa fas fa-books"></i><span class="mm-text"><span class="schet_menu" data-id="200">Учебные издания</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:60:104096665068470::NO::"><i class="menu-icon fa far fa-book-spells"></i><span class="mm-text"><span class="schet_menu" data-id="289">Публикации в рейтингах</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:239"><i class="menu-icon fa fas fa-dumbbell"></i><span class="mm-text"><span class="schet_menu" data-id="239">Физическая культура<span class="pkz"><i class="fa fa-external-link-square"></i> </span></span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:87:104096665068470::NO::"><i class="menu-icon fa far fa-file-invoice"></i><span class="mm-text"><span class="schet_menu" data-id="388">Экспертиза материалов</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:84:104096665068470::NO::"><i class="menu-icon fa far fa-laptop"></i><span class="mm-text"><span class="schet_menu" data-id="394">Вакансии по проектам</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:39:104096665068470::NO::"><i class="menu-icon fa fas fa-solar-panel"></i><span class="mm-text"><span class="schet_menu" data-id="286">Заявки на конференцию</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:42:104096665068470::NO::"><i class="menu-icon fa fas fa-globe-europe"></i><span class="mm-text"><span class="schet_menu" data-id="305">Конкурс ITMO.Online</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:85:104096665068470::NO::"><i class="menu-icon fa fas fa-clipboard-list-check"></i><span class="mm-text"><span class="schet_menu" data-id="320">ITMO.CoursesAssessment</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:82:104096665068470::NO::"><i class="menu-icon fa far fa-ballot-check"></i><span class="mm-text"><span class="schet_menu" data-id="385">Конкурс молодых ученых Университета ИТМО (Стенды) / ITMO University Young Scientists Competition
+(Stand)</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:145:104096665068470::NO::"><i class="menu-icon fa fa-calendar-alt"></i><span class="mm-text"><span class="schet_menu" data-id="730">Расписание</span></span></a></li></ul></li><li class="mm-dropdown mm-dropdown-root has-menu-icon"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#"><i class="menu-icon fa fa-toggle-off"></i><span class="mm-text"><span class="schet_menu" data-id="202">Результаты и достижения</span></span></a><ul class="mmc-dropdown-delay animated fadeInLeft"><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:3:104096665068470::NO::P3_LIST,P3_CLOSE_FILTER:0,1"><i class="menu-icon fa fa-book"></i><span class="mm-text"><span class="schet_menu" data-id="203">Публикации</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:3:104096665068470::NO::P3_LIST,P3_CLOSE_FILTER:2,1"><i class="menu-icon fa fa-plug"></i><span class="mm-text"><span class="schet_menu" data-id="204">Проекты</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:3:104096665068470::NO::P3_LIST,P3_CLOSE_FILTER:1,1"><i class="menu-icon fa fa-copyright"></i><span class="mm-text"><span class="schet_menu" data-id="205">РИД</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:3:104096665068470::NO::P3_LIST,P3_CLOSE_FILTER:3,1"><i class="menu-icon fa fa-medal"></i><span class="mm-text"><span class="schet_menu" data-id="230">Другие результаты</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:21:104096665068470::NO::"><i class="menu-icon fa far fa-file-certificate"></i><span class="mm-text"><span class="schet_menu" data-id="285">Сертификат навыков и компетенций</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:31:104096665068470::NO::"><i class="menu-icon fa fas fa-file-spreadsheet"></i><span class="mm-text"><span class="schet_menu" data-id="283">Отчеты</span></span></a></li></ul></li><li class="mm-dropdown mm-dropdown-root has-menu-icon"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#"><i class="menu-icon fa fa-toggle-off"></i><span class="mm-text"><span class="schet_menu" data-id="207">Административные сервисы</span></span></a><ul class="mmc-dropdown-delay animated fadeInLeft"><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:23:104096665068470::NO::"><i class="menu-icon fa fa-rub"></i><span class="mm-text"><span class="schet_menu" data-id="225">Финансы</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:311"><i class="menu-icon fa far fa-cabinet-filing"></i><span class="mm-text"><span class="schet_menu" data-id="311">Электронные заявки</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:55:104096665068470::NO::"><i class="menu-icon fa fa-copyright"></i><span class="mm-text"><span class="schet_menu" data-id="287">Электронная очередь</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:301"><i class="menu-icon fa fa-file-user"></i><span class="mm-text"><span class="schet_menu" data-id="301">Студенческий офис</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:80:104096665068470::NO::P80_LIST:0"><i class="menu-icon fa far fa-folder"></i><span class="mm-text"><span class="schet_menu" data-id="303">Документы</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:215"><i class="menu-icon fa fas fa-level-up-alt"></i><span class="mm-text"><span class="schet_menu" data-id="215">Повышение квалификации, стажировки</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:22:104096665068470::NO::P22_LIST:5"><i class="menu-icon fa fa-building"></i><span class="mm-text"><span class="schet_menu" data-id="293">Общежитие</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:216"><i class="menu-icon fa fas fa-car-side"></i><span class="mm-text"><span class="schet_menu" data-id="216">Командировки</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:22:104096665068470::NO::P22_LIST:10"><i class="menu-icon fa fa-credit-card"></i><span class="mm-text"><span class="schet_menu" data-id="291">БСК</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:15:104096665068470::NO::"><i class="menu-icon fa fa-tasks"></i><span class="mm-text"><span class="schet_menu" data-id="308">Фонды и конкурсы</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:104:104096665068470::NO::"><i class="menu-icon fa fas fa-heartbeat
+"></i><span class="mm-text"><span class="schet_menu" data-id="421">Моё здоровье</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:725"><i class="menu-icon fa fas fa-vote-yea"></i><span class="mm-text"><span class="schet_menu" data-id="725">Анкетирование и голосование</span></span></a></li></ul></li><li class="mm-dropdown mm-dropdown-root has-menu-icon"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#"><i class="menu-icon fa fa-toggle-off"></i><span class="mm-text"><span class="schet_menu" data-id="323">IT-сервисы</span></span></a><ul class="mmc-dropdown-delay animated fadeInLeft"><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:501" target="_blank"><i class="menu-icon fa fab fa-yandex"></i><span class="mm-text"><span class="schet_menu" data-id="501">Яндекс 360 <i class="fa fa-external-link-square"></i></span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:325"><i class="menu-icon fa fab fa-microsoft"></i><span class="mm-text"><span class="schet_menu" data-id="325">Microsoft office 365</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:326"><i class="menu-icon fa fa-wifi"></i><span class="mm-text"><span class="schet_menu" data-id="326">Wi-Fi</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:327"><i class="menu-icon fa fa-network-wired"></i><span class="mm-text"><span class="schet_menu" data-id="327">VPN</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:328"><i class="menu-icon fa fa-file-signature"></i><span class="mm-text"><span class="schet_menu" data-id="328">ЭЦП</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:121:104096665068470::NO::"><i class="menu-icon fa fa fa-qrcode"></i><span class="mm-text"><span class="schet_menu" data-id="383">Электронный пропуск</span></span></a></li></ul></li><li class="mm-dropdown mm-dropdown-root has-menu-icon"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#"><i class="menu-icon fa fa-toggle-off"></i><span class="mm-text"><span class="schet_menu" data-id="209">Представленность и коммуникации</span></span></a><ul class="mmc-dropdown-delay animated fadeInLeft"><li class="mm-dropdown"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#"><i class="menu-icon fa fa-envelope"></i><span class="mm-text"><span class="schet_menu" data-id="708">Сообщения</span></span></a><ul class="mmc-dropdown-delay animated fadeInLeft"><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:715"><i class="menu-icon fa fa-inbox"></i><span class="mm-text"><span class="schet_menu" data-id="715">Входящие</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:714"><i class="menu-icon fa fa-paper-plane"></i><span class="mm-text"><span class="schet_menu" data-id="714">Отправленные</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:713"><i class="menu-icon fa fa-star"></i><span class="mm-text"><span class="schet_menu" data-id="713">Избранные</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:712"><i class="menu-icon fa fa-pencil-square-o"></i><span class="mm-text"><span class="schet_menu" data-id="712">Черновики</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:711"><i class="menu-icon fa fa-trash"></i><span class="mm-text"><span class="schet_menu" data-id="711">Удаленные</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:726"><i class="menu-icon fa fa-archive"></i><span class="mm-text"><span class="schet_menu" data-id="726">Архив</span></span></a></li></ul></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:7:104096665068470::NO::"><i class="menu-icon fa fa-address-card"></i><span class="mm-text"><span class="schet_menu" data-id="224">Профиль</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:58:104096665068470:123:NO::P58_DEP_ID:213"><i class="menu-icon fa fa-envelope"></i><span class="mm-text"><span class="schet_menu" data-id="213">Сообщения (старая версия) <span class="pkz"><i class="fa fa-external-link-square"></i> </span></span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2122:11:104096665068470::NO::"><i class="menu-icon fa fa-envelope-open-o"></i><span class="mm-text"><span class="schet_menu" data-id="691">Коммуникационные площадки   <span class="pkz"><i class="fa fa-external-link-square"></i> </span></span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:18:104096665068470::NO::"><i class="menu-icon fa fa-group"></i><span class="mm-text"><span class="schet_menu" data-id="226">Коллеги</span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:16:104096665068470::NO::"><i class="menu-icon fa fa-handshake-o"></i><span class="mm-text"><span class="schet_menu" data-id="276">Партнеры</span></span></a></li></ul></li><li class="mm-dropdown mm-dropdown-root has-menu-icon"><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:110:104096665068470::NO::#"><i class="menu-icon fa fa-cogs"></i><span class="mm-text">Настройки</span></a><ul class="mmc-dropdown-delay animated fadeInLeft"><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2437:100:104096665068470::NO:RP:"><i class="menu-icon fa fa-th"></i><span class="mm-text">Настройка стартовой страницы</span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2156:1:104096665068470::NO:RP:P0_MENU_PROV:1"><i class="menu-icon fa fa-sign-in-alt"></i><span class="mm-text">Данные пользователя<span id="vhod" class="pkz" style="float:right;"> </span></span></a></li><li><a tabindex="-1" href="https://isu.ifmo.ru/pls/apex/f?p=2156:3:104096665068470::NO:RP:P0_MENU_PROV:1"><i class="menu-icon fa fa-bell"></i><span class="mm-text">Настройка оповещений<span id="opov" class="pkz" style="float:right;"> </span></span></a></li></ul></li></ul>
+        <ul class="navigation hide"></ul>
+        <ul class="isu-support navigation padding-sm no-padding-hr no-padding-b bordered no-border-hr no-border-b"><li class="has-menu-icon">
+    <a href="javascript:void(0);" class="man_cur_app" tabindex="-1">
+        <i class="fa fa-book menu-icon"></i><span class="mm-text">Инструкции</span>
+    </a>
+</li><li class="has-menu-icon">
+    <a href="https://helpdesk.itmo.ru/servicedesk/customer/portal/2" target="_blank" class="support_person_info support_link" tabindex="-1">
+        <i class="fa fa-support menu-icon"></i><span class="mm-text">Обратная связь</span>
+    </a>
+</li></ul><div class="menu-content animated fadeIn" style="margin-top: 11px;">
+            <div>
+               
+               <div class="text-center univ-about"><p class="univ-logo logo-for-clear"><a href="http://www.ifmo.ru/" target="_blank"><img src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/university.png" alt="[ИТМО]"></a></p><p class="univ-logo logo-for-dark"><a href="http://www.ifmo.ru/" target="_blank"><img src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/university-for-dark.png" alt="[ИТМО]"></a></p></div>
+    <!--<div class="meta-contacts">
+          <div class="mc-row-text"><div class="univ-about text-center">
+<p>
+<a href="https://helpdesk.itmo.ru/servicedesk/customer/portal/2" target="_blank">Служба поддержки</a>
+</p>
+</div></div>
+        <div class="mc-row">
+          <div class="mc-row-dep">     Личный кабинет, Портфолио подразделения</div>
+          <div class="mc-row-contacts">     +7 (812) 457-18-27</div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">     Учебный комплекс</div>
+          <div class="mc-row-contacts">     +7 (812) 233-78-35</div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">Подключение к сети, установка ПО, выделение виртуальных ресурсов, IP-телефония и др.</div>
+          <div class="mc-row-contacts"><a href="mailto:noc@itmo.ru">noc@itmo.ru</a></div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">     Научно-проектный комплекс</div>
+          <div class="mc-row-contacts">     +7 (812) 457-18-27</div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">     Административный комплекс</div>
+          <div class="mc-row-contacts">     +7 (812) 607-04-30</div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">     Финансово-хозяйственный комплекс</div>
+          <div class="mc-row-contacts">     +7 (812) 607-04-30</div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">Корпоративная почта</div>
+          <div class="mc-row-contacts"><a href="http://dici.ifmo.ru/index.php/sotrudnikam/17-services/itmo-ru/92-chasto-zadavaemye-voprosy-po-migratsii-pochty-s-corp-ifmo-ru-na-itmo-ru" target="_blank">Частые вопросы, Задать вопрос</a></div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">Работа в Wi-Fi сети "Corp-ITMO"</div>
+          <div class="mc-row-contacts"><a href="mailto:wifisupport@itmo.ru">wifisupport@itmo.ru</a></div>
+        </div>
+    </div>-->
+    <div class="meta-contacts">
+        <div class="mc-row">
+          <div class="mc-row-dep">Студенческий офис</div>
+          <div class="mc-row-contacts">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://helpdesk.itmo.ru/servicedesk/customer/portal/12" target="_blank">Оставить заявку</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:so@itmo.ru">so@itmo.ru</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://student.itmo.ru/" target="_blank">student.itmo.ru</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+7 (812) 480-90-00</div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">Офис поддержки сотрудников</div>
+          <div class="mc-row-contacts">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:faculty@itmo.ru">faculty@itmo.ru</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+7 (812) 607-02-50</div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">Служба поддержки ИСУ</div>
+          <div class="mc-row-contacts">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://helpdesk.itmo.ru/servicedesk/customer/portal/2" target="_blank">Служба поддержки</a></div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">Служба поддержки интернет-ресурсов</div>
+          <div class="mc-row-contacts">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:websupport@itmo.ru">websupport@itmo.ru</a></div>
+        </div>
+        <div class="mc-row">
+          <div class="mc-row-dep">Служба технической поддержки университета</div>
+          <div class="mc-row-contacts">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://helpdesk.itmo.ru/servicedesk/customer/portal/9" target="_blank">Центр поддержки</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+7 (812) 480-20-11, +7 (812) 607-06-17<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(с 8-30 до 20-00)</div>
+        </div>
+    </div>
+
+      		   
+            </div>
+        </div>
+      </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 465.712px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    </div>
+    <!-- / Main menu -->
+    
+    <!-- Content -->
+    <div id="content-wrapper" class="body">
+   	  <div>
+        
+      </div>
+      <div class="page-header affix" data-spy="affix" data-offset-top="0">
+         <h1>Электронная зачетная книжка</h1>
+         <ajax_r4433369405702771311><span id="R4433369405702771311" class="i_dummy "><table summary="" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td align="right"></td></tr></tbody></table></span></ajax_r4433369405702771311>
+      </div><div for=".page-header" style="height: 61px;"></div>
+      <div class="content-grid-wrapper">
+	    <div class="row">
+          <div class="col-md-12 col-main"><ajax_main_list><span id="main_list" class="i_dummy hide "><input type="hidden" name="p_arg_names" value="6327659916601901886"><input type="hidden" name="p_t14" id="P0_LOG_CLICK" value="312"></span></ajax_main_list><ajax_r3896385704138247733><span id="R3896385704138247733" class="i_dummy "><style>
+.table-primary .apex_report_break {
+    background: #FAFAFA;
+    border-color: #DBDBDB!important;
+    color: #555;
+}
+</style><input type="hidden" name="p_arg_names" value="4483385324526844452"><input type="hidden" name="p_t15" id="P110_FILE_ID" value=""><div class="form-group"><label for="P110_ZK_ID" class="control-label optional" tabindex="999">Электронная зачетная книжка</label><input type="hidden" name="p_arg_names" value="8908386529528949233"><select id="P110_ZK_ID" name="p_t16" class="selectlist form-control" size="1"><option value="" selected="selected">Бакалавриат (текущее обучение)</option>
+</select></div><img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkS%0AEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJ%0ACQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy%0AMjIyMjIyMjIyMjIyMjL/wAARCAFoAQ4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEA%0AAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh%0AMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6%0AQ0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZ%0AmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx%0A8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA%0AAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV%0AYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hp%0AanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPE%0AxcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDp%0AMUhFPxxSEcUyhuKKWigLCYpcUUv0oCwUYpce1AoAKOtLQMUgExxRinYzSYoAQUYp%0AaBQAgHNFLikoAKMUUtAxMc0UtLQA3HNFLig4oENoxS4pe1ANCUmKWloENo707FFA%0AIaKKXFGKAE70YpaKAEAoopRigQUClowKosSkxS0daQAKOKKKAClopaACjFFFILBi%0AlpKCaBhRSZpMimApNJnis7UNYttPUlzuYdga5ifx08bnZZKy/wC1JtP8jSCx3GfW%0AlBFcda+O7WVttzaTR/7SEOP6Gujh1SzuLdZ4rhGjYZDZx/8AqoEX6KojVLQjPnx4%0A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%0AGB//2Q==" alt="Photo" style="max-width:170px;max-height:200px;object-fit:cover"><br> <h4>[311697] Скакун Артем Андреевич - Бюджет</h4> <p><b>Дата выдачи зачетной книжки: </b>22.08.2020</p> <p><b>Код, направление подготовки (специальность): </b>09.03.04 Программная инженерия</p> <p><b>Образовательная программа: </b>Нейротехнологии и программирование</p> <p><b>Группа: </b>P33201</p> <p><b>Структурное подразделение: </b>факультет программной инженерии и компьютерной техники (ФПИ и КТ)</p> <p><b>Зачислен приказом</b> от 22.08.2020 № 1754-уч</p> <p><b>Руководитель структурного подразделения: </b><a href="https://isu.ifmo.ru/person/104611/104096665068470" target="_blank">Кустарев П.В.</a></p><br> <style>
+        .apex_report_break {
+            background: #FAFAFA;
+            border-color: #DBDBDB!important;
+            color: #555;
+        }
+        </style> <div id="scrolltable-1_scroller_dummy" scrolltable-id="scrolltable-1" class="hide" style="position: static; height: 17px;"></div><div id="scrolltable-1_scroller" scrolltable-id="scrolltable-1" style="top: 100px; height: 17px; overflow: auto hidden; z-index: 400; width: 1513px; position: static;" class="hide"><div style="width: 1513px;">&nbsp;</div></div><div class="table-responsive scrolltable-ready table-light"><table class="table table-bordered" style="text-align:center;" id="scrolltable-1"> <tbody><tr><th style="text-align:left;" colspan="13" class="apex_report_break">2021/2022 - 1 Семестр</th></tr> <tr style="background-color:#e4e4e4;" class="header">
+          <th style="text-align:center;">Дисциплина</th>
+          <th style="text-align:center;">Кол-во часов</th>
+          <th style="text-align:center;">Объем ЗЕ</th>
+          <th style="text-align:center;">Вид контроля</th><th style="text-align:center;">Попытка</th><th style="text-align:center;">Баллы</th><th style="text-align:center;">Планирую повысить баллы</th><th style="text-align:center;">Отметка</th><th style="text-align:center;">Буква</th>
+          <th style="text-align:center;">Дата экз/зач</th>
+          <th style="text-align:center;">Дата блокировки</th>      
+          <th style="text-align:center;">Преподаватель</th><th style="text-align:center;">Сообщение</th></tr> <tr><td class="report_column" style="text-align:left;">Введение в цифровую культуру</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">89</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Михайлова Елена Георгиевна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Дискретная математика</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">80</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Поляков Владимир Иванович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Иностранный язык</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">70</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Дидковская Мария Константиновна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Информатика</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">88,2</td><td class="report_column" style="text-align:right;"></td><td class="report_column">4</td><td class="report_column">B</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Балакшин Павел Валерьевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">История (История становления Российской государственности)</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">89,1</td><td class="report_column" style="text-align:right;"></td><td class="report_column">4</td><td class="report_column">B</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Козлова Дарья Константиновна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Математика</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">84,2</td><td class="report_column" style="text-align:right;"></td><td class="report_column">4</td><td class="report_column">B</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Пыркин Антон Александрович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Основы профессиональной деятельности</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Клименков Сергей Викторович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Программирование</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">72,3</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Письмак Алексей Евгеньевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Физическая культура</td><td class="report_column">36</td><td class="report_column">1</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">100</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Раскин Евгений Олегович</td><td class="report_column"></td></tr> <tr><th style="text-align:left;" colspan="13" class="apex_report_break">2021/2022 - 2 Семестр</th></tr> <tr style="background-color:#e4e4e4;" class="header">
+          <th style="text-align:center;">Дисциплина</th>
+          <th style="text-align:center;">Кол-во часов</th>
+          <th style="text-align:center;">Объем ЗЕ</th>
+          <th style="text-align:center;">Вид контроля</th><th style="text-align:center;">Попытка</th><th style="text-align:center;">Баллы</th><th style="text-align:center;">Планирую повысить баллы</th><th style="text-align:center;">Отметка</th><th style="text-align:center;">Буква</th>
+          <th style="text-align:center;">Дата экз/зач</th>
+          <th style="text-align:center;">Дата блокировки</th>      
+          <th style="text-align:center;">Преподаватель</th><th style="text-align:center;">Сообщение</th></tr> <tr><td class="report_column" style="text-align:left;">Дискретная математика</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">81</td><td class="report_column" style="text-align:right;"></td><td class="report_column">4</td><td class="report_column">C</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Поляков Владимир Иванович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Иностранный язык</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">68</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Дидковская Мария Константиновна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Коммуникации и командообразование</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">67</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Тен Наталья Геннадьевна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Математика</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">76,8</td><td class="report_column" style="text-align:right;"></td><td class="report_column">4</td><td class="report_column">C</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Пыркин Антон Александрович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Основы профессиональной деятельности</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Дифф. зачет</td><td class="report_column">1</td><td class="report_column">69,1</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">D</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Клименков Сергей Викторович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Программирование</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Гаврилов Антон Валерьевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Физика</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">77,4</td><td class="report_column" style="text-align:right;"></td><td class="report_column">4</td><td class="report_column">C</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Коробков Максим Петрович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Физическая культура</td><td class="report_column">36</td><td class="report_column">1</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">100</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Раскин Евгений Олегович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Философия</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">73</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">D</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Погребняк Александр Анатольевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Хранение и обработка данных</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">86</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Михайлова Елена Георгиевна</td><td class="report_column"></td></tr> <tr><th style="text-align:left;" colspan="13" class="apex_report_break">2022/2023 - 3 Семестр</th></tr> <tr style="background-color:#e4e4e4;" class="header">
+          <th style="text-align:center;">Дисциплина</th>
+          <th style="text-align:center;">Кол-во часов</th>
+          <th style="text-align:center;">Объем ЗЕ</th>
+          <th style="text-align:center;">Вид контроля</th><th style="text-align:center;">Попытка</th><th style="text-align:center;">Баллы</th><th style="text-align:center;">Планирую повысить баллы</th><th style="text-align:center;">Отметка</th><th style="text-align:center;">Буква</th>
+          <th style="text-align:center;">Дата экз/зач</th>
+          <th style="text-align:center;">Дата блокировки</th>      
+          <th style="text-align:center;">Преподаватель</th><th style="text-align:center;">Сообщение</th></tr> <tr><td class="report_column" style="text-align:left;">Бизнес-модели основных секторов инновационной экономики</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">94</td><td class="report_column" style="text-align:right;"></td><td class="report_column">5</td><td class="report_column">A</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Кальниченко Юлия Олеговна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Веб-программирование</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Цопа Евгений Алексеевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Иностранный язык</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">60</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Дидковская Мария Константиновна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Математика</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">60,1</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Андреев Юрий Сергеевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Основы проектирования киберфизических систем</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">61</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Борисов Олег Игоревич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Прикладная статистика</td><td class="report_column">72</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">86</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Бойцев Антон Александрович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Теория автоматического управления</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">64</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Борисов Олег Игоревич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Техники публичных выступлений и презентаций</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">61</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Тен Наталья Геннадьевна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Физика</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">69,4</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">D</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Белов Павел Александрович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Физическая культура (элективная дисциплина)</td><td class="report_column">72</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">100</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Русанов Дмитрий Юрьевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Языки программирования</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">61</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Жирков Игорь Олегович</td><td class="report_column"></td></tr> <tr><th style="text-align:left;" colspan="13" class="apex_report_break">2022/2023 - 4 Семестр</th></tr> <tr style="background-color:#e4e4e4;" class="header">
+          <th style="text-align:center;">Дисциплина</th>
+          <th style="text-align:center;">Кол-во часов</th>
+          <th style="text-align:center;">Объем ЗЕ</th>
+          <th style="text-align:center;">Вид контроля</th><th style="text-align:center;">Попытка</th><th style="text-align:center;">Баллы</th><th style="text-align:center;">Планирую повысить баллы</th><th style="text-align:center;">Отметка</th><th style="text-align:center;">Буква</th>
+          <th style="text-align:center;">Дата экз/зач</th>
+          <th style="text-align:center;">Дата блокировки</th>      
+          <th style="text-align:center;">Преподаватель</th><th style="text-align:center;">Сообщение</th></tr> <tr><td class="report_column" style="text-align:left;">Алгоритмы и структуры данных</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">60</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Косяков Михаил Сергеевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Безопасность жизнедеятельности</td><td class="report_column">72</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">66</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Русанов Дмитрий Юрьевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Вычислительная математика</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">61,5</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Малышева Татьяна Алексеевна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Инновационная экономика и технологическое предпринимательство</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">67</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Кальниченко Юлия Олеговна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Иностранный язык</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">61</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Дидковская Мария Константиновна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Машинное обучение и анализ данных</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">67,6</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Бойцев Антон Александрович</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Организационное и правовое обеспечение информационной безопасности</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">70</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">D</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Заколдаев Данил Анатольевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Теория вероятностей</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">65,5</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Селина Елена Георгиевна</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Теория информационной безопасности и методология защиты информации</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">62</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Заколдаев Данил Анатольевич</td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Физическая культура (элективная дисциплина)</td><td class="report_column">72</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">100</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">23.08.2023</td><td class="report_column"></td><td class="report_column" style="text-align:left;">Русанов Дмитрий Юрьевич</td><td class="report_column"></td></tr> <tr><th style="text-align:left;" colspan="13" class="apex_report_break">2023/2024 - 5 Семестр</th></tr> <tr style="background-color:#e4e4e4;" class="header">
+          <th style="text-align:center;">Дисциплина</th>
+          <th style="text-align:center;">Кол-во часов</th>
+          <th style="text-align:center;">Объем ЗЕ</th>
+          <th style="text-align:center;">Вид контроля</th><th style="text-align:center;">Попытка</th><th style="text-align:center;">Баллы</th><th style="text-align:center;">Планирую повысить баллы</th><th style="text-align:center;">Отметка</th><th style="text-align:center;">Буква</th>
+          <th style="text-align:center;">Дата экз/зач</th>
+          <th style="text-align:center;">Дата блокировки</th>      
+          <th style="text-align:center;">Преподаватель</th><th style="text-align:center;">Сообщение</th></tr> 
+          <tr><td class="report_column" style="text-align:left;">Когнитивные инструменты принятия решений</td><td class="report_column">72</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">60</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">09.11.2023</td><td class="report_column">10.11.2023</td><td class="report_column" style="text-align:left;">Хохлова Наталья Георгиевна</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Эмоциональный интеллект</td><td class="report_column">72</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">74,7</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">22.12.2023</td><td class="report_column">25.12.2023</td><td class="report_column" style="text-align:left;">Бразовская Татьяна Викторовна</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Иностранный язык</td><td class="report_column">180</td><td class="report_column">5</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">63</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">12.01.2024</td><td class="report_column">30.12.2023</td><td class="report_column" style="text-align:left;">Елякова Валерия Валерьевна</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Методы информационного поиска</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">17.11.2023</td><td class="report_column">10.01.2024</td><td class="report_column" style="text-align:left;">Волчек Дмитрий Геннадьевич</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Физическая культура (элективная дисциплина)</td><td class="report_column">72</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column">100</td><td class="report_column" style="text-align:right;"></td><td class="report_column">зачтено</td><td class="report_column"></td><td class="report_column">18.01.2024</td><td class="report_column">12.01.2024</td><td class="report_column" style="text-align:left;">Русанов Дмитрий Юрьевич</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Нейротехнологии и аффективные вычисления</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">75</td><td class="report_column" style="text-align:right;"></td><td class="report_column">4</td><td class="report_column">C</td><td class="report_column">12.01.2024</td><td class="report_column">15.01.2024</td><td class="report_column" style="text-align:left;">Русак Алена Викторовна</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Базы данных</td><td class="report_column">180</td><td class="report_column">5</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">63</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">16.01.2024</td><td class="report_column">18.01.2024</td><td class="report_column" style="text-align:left;">Николаев Владимир Вячеславович</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Системы искусственного интеллекта</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">64</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">24.01.2024</td><td class="report_column">23.01.2024</td><td class="report_column" style="text-align:left;">Бессмертный Игорь Александрович</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Разработка веб-приложений</td><td class="report_column">180</td><td class="report_column">5</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">36</td><td class="report_column" style="text-align:right;"></td><td class="report_column">2</td><td class="report_column">FX</td><td class="report_column">22.01.2024</td><td class="report_column">24.01.2024</td><td class="report_column" style="text-align:left;">Михайлюк Степан Денисович</td><td class="report_column"><button class="btn btn-warning no-mark-msg" type="button" data-ses-id="10981024">Связаться</button></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Технологии разработки мультимедийных цифровых ресурсов</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Дифф. зачет</td><td class="report_column">1</td><td class="report_column">95</td><td class="report_column" style="text-align:right;"></td><td class="report_column">5</td><td class="report_column">A</td><td class="report_column">24.01.2024</td><td class="report_column">26.01.2024</td><td class="report_column" style="text-align:left;">Меженин Александр Владимирович</td><td class="report_column"></td></tr> 
+          <tr><td class="report_column" style="text-align:left;">Операционные системы</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column">62</td><td class="report_column" style="text-align:right;"></td><td class="report_column">3</td><td class="report_column">E</td><td class="report_column">27.01.2024</td><td class="report_column">30.01.2024</td><td class="report_column" style="text-align:left;">Клименков Сергей Викторович</td><td class="report_column"></td></tr> 
+          <tr><th style="text-align:left;" colspan="13" class="apex_report_break">2023/2024 - 6 Семестр</th></tr> <tr style="background-color:#e4e4e4;" class="header">
+          <th style="text-align:center;">Дисциплина</th>
+          <th style="text-align:center;">Кол-во часов</th>
+          <th style="text-align:center;">Объем ЗЕ</th>
+          <th style="text-align:center;">Вид контроля</th><th style="text-align:center;">Попытка</th><th style="text-align:center;">Баллы</th><th style="text-align:center;">Планирую повысить баллы</th><th style="text-align:center;">Отметка</th><th style="text-align:center;">Буква</th>
+          <th style="text-align:center;">Дата экз/зач</th>
+          <th style="text-align:center;">Дата блокировки</th>      
+          <th style="text-align:center;">Преподаватель</th><th style="text-align:center;">Сообщение</th></tr> <tr><td class="report_column" style="text-align:left;">Интеллектуальная обработка экспериментальных данных</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Дифф. зачет</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column" style="text-align:left;"></td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Компьютерные сети</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column" style="text-align:left;"></td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Нейроинтерфейсы информационных систем</td><td class="report_column">180</td><td class="report_column">5</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column" style="text-align:left;"></td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Параллельное программирование</td><td class="report_column">144</td><td class="report_column">4</td><td class="report_column">Экзамен</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column" style="text-align:left;"></td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Системное администрирование</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Дифф. зачет</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column" style="text-align:left;"></td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Теория систем</td><td class="report_column">108</td><td class="report_column">3</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column" style="text-align:left;"></td><td class="report_column"></td></tr> <tr><td class="report_column" style="text-align:left;">Физическая культура (элективная дисциплина)</td><td class="report_column">56</td><td class="report_column">2</td><td class="report_column">Зачет</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column" style="text-align:right;"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column"></td><td class="report_column" style="text-align:left;"></td><td class="report_column"></td></tr> </tbody></table></div><br> <h4>Курсовые проекты (работы)</h4> <div id="scrolltable-2_scroller_dummy" scrolltable-id="scrolltable-2" class="hide" style="position: static; height: 17px;"></div><div id="scrolltable-2_scroller" scrolltable-id="scrolltable-2" style="top: 100px; height: 17px; overflow: auto hidden; z-index: 400; width: 1513px; position: static;" class="hide"><div style="width: 1513px;">&nbsp;</div></div><div class="table-responsive scrolltable-ready table-light"><table class="table table-bordered" style="text-align:center;" id="scrolltable-2"><tbody><tr style="background-color:#e4e4e4;"><th style="text-align:center;">Семестр</th><th style="text-align:center;">Дисциплина</th><th style="text-align:center;">Тема курсового проекта (работы)</th><th style="text-align:center;">Попытка</th><th style="text-align:center;">Отметка</th><th style="text-align:center;">Дата</th><th style="text-align:center;">Преподаватель</th></tr> <tr><td class="report_column">5</td><td class="report_column" style="text-align:left;">Разработка веб-приложений</td><td class="report_column">Разработка WEB приложения "Приложение для отслеживания физической активности Sport Track"</td><td class="report_column">1</td><td class="report_column"></td><td class="report_column"></td><td class="report_column">Михайлюк Степан Денисович</td></tr> </tbody></table></div><br> <h4>Выпускная квалификационная работа</h4> <p>Форма выпускной квалификационной работы: Выпускная квалификационная работа</p> <p>Тема: </p> <p>Руководитель: </p> <p>Дата защиты: </p> <p>Оценка: </p><br> <h4>Решение государственной экзаменационной комиссии</h4> <p>от  протокол № </p> <p>Присвоена квалификация: </p> <p>Председатель: </p><br> <h4>Диплом</h4><br>Серия бланка: <br>Номер бланка: <br> Регистрационный номер: <br><br> <h4>Приложение к диплому</h4><br>Серия бланка: <br>Номер бланка: <br> Регистрационный номер: <br><br> <br>Дата выдачи: <p></p><br></span></ajax_r3896385704138247733><ajax_modalform>
+<div class="modal fade bs-example-modal-lg" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog modal-xxlg">
+	    <div class="modal-content">
+	        <div class="modal-header">
+	        	<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+	        	<h4 id="modal-title-modalForm" class="modal-title">Сообщить об отсутствии оценки</h4>
+	        </div>
+	         <!-- /.modal-header -->
+		    <div class="modal-buttons panel-padding-h clearfix">
+		        <div class="btn-group pull-left modal-buttons-left">
+		            
+		        </div>
+		        <div class="btn-group pull-right modal-buttons-right">
+		            
+		        </div>
+		    </div>
+		    <!-- /.modal-buttons -->
+	        <div class="modal-body">
+	            
+<ajax_disinfo><span id="disInfo" class="i_dummy "><p><strong>Дисциплина: </strong>Разработка веб-приложений</p><p><strong>Кол-во часов: </strong>180</p><p><strong>Объем ЗЕ: </strong>5</p><p><strong>Вид контроля: </strong>Экзамен</p><p><strong>Попытка: </strong>1</p><p><strong>Баллы: </strong></p><p><strong>Планирую повысить баллы: </strong></p><p><strong>Отметка: </strong></p><p><strong>Буква: </strong></p><p><strong>Дата экз/зач: </strong>22.01.2024</p><p><strong>Дата блокировки: </strong>24.01.2024</p><p><strong>Преподаватель: </strong>Михайлюк Степан Денисович</p></span></ajax_disinfo>
+
+<ajax_r3906905002227364260><span id="R3906905002227364260" class="i_dummy "><div class="form-group"><label for="P110_NO_MARK_MSG" class="control-label optional optional-help"><a href="javascript:G2.help(&#39;3906910113900382815&#39;,&#39;104096665068470&#39;)" class="optional-w-help"></a></label><input type="hidden" name="p_arg_names" value="3906910113900382815"><fieldset id="P110_NO_MARK_MSG_fieldset" class="textarea" tabindex="-1"><textarea name="p_t17" rows="5" cols="80" maxlength="4000" wrap="virtual" id="P110_NO_MARK_MSG" placeholder="Опишите вашу проблему" class="textarea form-control" style="resize: both;"></textarea></fieldset></div><table summary="" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td align="left"><button value="Отправить" id="submit-msg-btn" onclick="javascript:void(0);" class="btn btn-success" type="button" data-ses-id="10981024">
+    Отправить
+</button></td></tr></tbody></table></span></ajax_r3906905002227364260>
+
+	        </div>
+	        <!-- /.modal-body -->
+		    <div class="modal-buttons panel-padding-h">
+		        <div class="clearfix">
+		            <div class="pull-left modal-buttons-left"></div>
+		            <div class="pull-right modal-buttons-right"></div>
+		        </div>
+		        <div class="modal-buttons-center text-center"></div>
+		    </div>
+		    <!-- /.modal-buttons -->
+	    </div>
+	</div>
+</div>
+</ajax_modalform></div>
+	    </div>
+	    <div class="row">
+	      <div class="col-md-12"></div>
+	    </div>
+      </div>
+    </div>
+    <div id="main-menu-bg"></div>
+    <!-- / Content -->      
+  </div>  <input type="hidden" name="p_md5_checksum" value=""><input type="hidden" name="p_page_checksum" value="736ED9A9ACB1A3B5B8324ABE3FE446D9" id="pPageChecksum"></form>
+  <script type="text/javascript">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"triggeringElement":"apex.gPageContext$","triggeringElementType":"DOM_OBJECT","bindType":"bind","bindEventType":"apexbeforepagesubmit",actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ G2.submit();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElement":".no-mark-msg","triggeringElementType":"JQUERY_SELECTOR","bindType":"live","bindEventType":"click",actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $s('P110_NO_MARK_MSG', '');
+
+let id = this.triggeringElement.getAttribute('data-ses-id');
+let row = this.triggeringElement.parentNode.parentNode.children;
+
+let form = document.getElementById('disInfo');
+form.innerHTML = "";
+
+let pr_num = 0, p;
+
+$('tr.header').first().children().each(function () {
+    if ($(this).text() != 'Сообщение') {   
+        p = document.createElement('p');
+        if (pr_num == 5) {
+			p.innerHTML = '<strong>' + $(this).text() + ': </strong>';
+            let checked = $('input[data-ses-id="' + id + '"]').prop("checked");
+            
+            if (checked) {
+            	p.innerHTML += "да, " + row[pr_num].innerText;
+            }
+        } else {
+			p.innerHTML = '<strong>' + $(this).text() + ': </strong>' + row[pr_num].innerText;
+        }
+        form.appendChild(p);
+    }
+    pr_num++;
+});
+
+$('#submit-msg-btn').attr('data-ses-id', id);
+
+$('#modalForm').modal('show');
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"submit-msg-btn","bindType":"live","bindEventType":"click",actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"A684D3F35C9D8E19E30F4A0552CFDC143C5BD1240DA8789FEF0A652935188F36","attribute01":"#P110_NO_MARK_MSG","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ let id = this.triggeringElement.getAttribute('data-ses-id');
+let disInfoHTML = $('#disInfo').html();
+
+let msg_length = $v("P110_NO_MARK_MSG").length;
+
+if (msg_length > 0) {
+    G2.ajax({
+        process: "submit_no_mark_message", 
+        g_params: [id, disInfoHTML]
+    }).then(function(response) {
+        G2.notify({
+            title: " ",
+            text: "Сообщение отправлено",
+            center: true
+        });
+        
+        $('#modalForm').modal('hide');
+        window.location.reload();
+        
+    });
+}
+
+
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElement":" div#main-menu \u003E div \u003E div \u003E ul.navigation \u003E li.mm-dropdown \u003E ul.mmc-dropdown-delay \u003E li ","triggeringElementType":"JQUERY_SELECTOR","bindType":"live","bindEventType":"click",actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $('#P0_LOG_CLICK').val($(this.triggeringElement).find('span.schet_menu').attr('data-id'));
+},"action":"NATIVE_JAVASCRIPT_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"EF4F569C83BF1EAED5828831D4416FC0FA0A870DF246C53904B7EE92F15A2DCA","attribute01":"#P0_LOG_CLICK","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"67509E64CC393DC42621EDE940E3E4DE33115BF017C44DF94E0488B4CBD57F71","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"}]},
+{"triggeringElement":"P110_ZK_ID","triggeringElementType":"ITEM","bindType":"bind","bindEventType":"change",actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"491D5494504B58695BD33B7EE6A7E80F949C08E507E1CB73AC99E784F673451D","attribute01":"#P110_ZK_ID","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:apex.da.submitPage,"attribute02":"Y","action":"NATIVE_SUBMIT_PAGE"}]},
+{"bindEventType":"ready",actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ init.push(function () {
+    $('#main-navbar input[name="f50"]').on('keyup', function (e) {
+        var obj = $(this);
+        if (obj.val().length && e.keyCode == 13 /*Enter*/) {
+            e.preventDefault();
+            location.href = Common.apexReplace('f?p=2143:PERSONS:104096665068470::NO:PERSON_FILTER:' || encodeURIComponent(obj.val()));  //G2.url({'PERSON_FILTER':encodeURIComponent(obj.val())}, null, 'PERSONS', true);
+        }
+    });
+});
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElement":".support_person_info","triggeringElementType":"JQUERY_SELECTOR","bindType":"bind","bindEventType":"click",actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"CBC1EDA888FD368C038A91268B559C93C6858C0BE6BF843ECD9778FC33D529F7","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"}]}];
+}
+</script>
+
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/widget.selectList.min.js"></script>
+<script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/widget.textarea.min.js"></script>
+<script type="text/javascript">
+apex.jQuery( document ).ready( function() {
+(function(){apex.widget.selectList("#P110_ZK_ID",{"ajaxIdentifier":"009ACBA20DA049B04BBEFA62532BF80B2D349CDE222BE6A4EED93AA1EFF6F279"});})();
+(function(){apex.widget.textarea("P110_NO_MARK_MSG",{isResizable:true});})();
+(function(){apex.da.initDaEventList();})();
+(function(){apex.da.init();})();
+(function(){apex.jQuery("<img />").attr("src","/i/processing3.gif");})();
+
+
+});</script>
+
+
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/pixel-admin.min.js"></script>
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/jquery-ui-extras.min.js"></script>
+  <script type="text/javascript">
+    init.push(function () { G2.init(); });
+    var settings = { main_menu: { detect_active : false} }
+  window.PixelAdmin.start(init, settings);
+  </script>
+
+  <script type="text/javascript" src="./Электронная зачетная книжка - ИСУ ИТМО [Личный кабинет]_files/footer_page_prepare.js" id="prepare-script"></script>
+
+<div id="small-screen-width-point" style="position:absolute;top:-10000px;width:10px;height:10px;background:#fff;"></div><div id="tablet-screen-width-point" style="position:absolute;top:-10000px;width:10px;height:10px;background:#fff;"></div><div id="yt_article_summary_widget_wrapper" class="yt_article_summary_widget_wrapper" style="display: none;">
+        <div id="yt_article_summary_widget" class="yt_article_summary_widget"><svg style="filter: brightness(0.8);" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-outside-1_3606_3145" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22" fill="black">
+                <rect fill="white" x="1" y="1" width="22" height="22"></rect>
+                <path d="M20.6816 10.1843C20.9588 9.34066 21.0063 8.4399 20.8192 7.57245C20.6321 6.70499 20.217 5.90134 19.6157 5.24216C19.0143 4.58298 18.2478 4.09146 17.393 3.81692C16.5382 3.54238 15.6253 3.49449 14.7459 3.67805C14.1453 3.01747 13.379 2.52468 12.524 2.24931C11.669 1.97394 10.7555 1.92571 9.87559 2.10947C8.99568 2.29324 8.18039 2.70252 7.51181 3.29608C6.84323 3.88965 6.34499 4.64654 6.06725 5.49055C5.18642 5.67292 4.3699 6.08122 3.70003 6.67426C3.03017 7.26731 2.53064 8.02413 2.25182 8.86842C1.97299 9.71271 1.92474 10.6146 2.11192 11.4832C2.2991 12.3517 2.71509 13.1562 3.31795 13.8155C3.09309 14.4899 3.01633 15.2037 3.09278 15.9095C3.16924 16.6154 3.39716 17.2971 3.76139 17.9093C4.30169 18.8351 5.12567 19.568 6.11483 20.0027C7.104 20.4373 8.20738 20.5512 9.26631 20.328C9.74353 20.8568 10.3291 21.2796 10.9844 21.5684C11.6396 21.8571 12.3495 22.0053 13.0672 22.003C14.1516 22.003 15.2081 21.6635 16.0847 21.0334C16.9612 20.4034 17.6125 19.5152 17.9449 18.4968C18.649 18.3539 19.3141 18.0649 19.8962 17.6489C20.4784 17.233 20.9642 16.6997 21.3214 16.0843C21.8585 15.1598 22.0858 14.0915 21.9709 13.032C21.856 11.9724 21.4048 10.9758 20.6816 10.1843ZM13.0798 20.6968C12.191 20.6968 11.3302 20.3894 10.6473 19.828L10.7677 19.7593L14.8029 17.4593C14.9069 17.4047 14.9935 17.3225 15.0528 17.2221C15.1121 17.1216 15.1418 17.0068 15.1386 16.8905V11.2655L16.8427 12.2405C16.8517 12.2441 16.8594 12.2501 16.865 12.2579C16.8706 12.2656 16.8739 12.2748 16.8744 12.2843V16.9343C16.876 17.4289 16.7785 17.9189 16.5875 18.3761C16.3964 18.8333 16.1156 19.2488 15.7611 19.5985C15.4067 19.9482 14.9856 20.2253 14.5222 20.4138C14.0588 20.6023 13.5621 20.6984 13.0608 20.6968H13.0798ZM4.90165 17.2593C4.46164 16.5029 4.3026 15.6189 4.45188 14.7593L4.57224 14.828L8.60749 17.128C8.70379 17.1829 8.81303 17.2118 8.92423 17.2118C9.03543 17.2118 9.14467 17.1829 9.24097 17.128L14.1758 14.3218V16.253C14.1797 16.2608 14.1817 16.2694 14.1817 16.278C14.1817 16.2867 14.1797 16.2953 14.1758 16.303L10.0962 18.628C9.66403 18.8748 9.18685 19.0352 8.69188 19.0999C8.19692 19.1647 7.69387 19.1326 7.21148 19.0055C6.72909 18.8784 6.27681 18.6587 5.88048 18.3591C5.48415 18.0595 5.15154 17.6858 4.90165 17.2593ZM3.83741 8.5843C4.28764 7.82089 4.99655 7.23878 5.83919 6.94055V11.6718C5.83595 11.7857 5.86434 11.8983 5.92128 11.9975C5.97823 12.0966 6.06156 12.1785 6.16227 12.2343L11.0717 15.028L9.36766 16.003C9.34918 16.0092 9.32914 16.0092 9.31065 16.003L5.23106 13.678C4.36041 13.1812 3.72487 12.3642 3.46364 11.4059C3.20242 10.4476 3.33682 9.42624 3.83741 8.56555V8.5843ZM17.8563 11.7968L12.9278 8.9718L14.6319 8.00305C14.6403 7.99741 14.6502 7.99439 14.6604 7.99439C14.6705 7.99439 14.6805 7.99741 14.6889 8.00305L18.7685 10.328C19.3915 10.684 19.8992 11.2072 20.2325 11.8368C20.5659 12.4664 20.7111 13.1764 20.6514 13.8843C20.5916 14.5921 20.3294 15.2687 19.8951 15.8352C19.4608 16.4017 18.8724 16.8349 18.1983 17.0843V12.353C18.1946 12.2391 18.1612 12.1281 18.1013 12.0306C18.0414 11.9332 17.957 11.8527 17.8563 11.7968ZM19.554 9.2968L19.4336 9.2218L15.4047 6.9093C15.3047 6.84846 15.1896 6.81624 15.0721 6.81624C14.9547 6.81624 14.8395 6.84846 14.7396 6.9093L9.8111 9.71555V7.75305C9.8061 7.7445 9.80346 7.7348 9.80346 7.72492C9.80346 7.71505 9.8061 7.70535 9.8111 7.6968L13.897 5.37805C14.5222 5.02257 15.2371 4.85003 15.958 4.88059C16.6789 4.91115 17.3762 5.14356 17.9682 5.55064C18.5601 5.95772 19.0225 6.52265 19.301 7.17939C19.5796 7.83614 19.663 8.55755 19.5413 9.2593L19.554 9.2968ZM8.87989 12.7218L7.1695 11.753C7.15339 11.7405 7.1422 11.7228 7.13782 11.703V7.06555C7.13785 6.35289 7.34371 5.65499 7.73128 5.0536C8.11885 4.45222 8.67209 3.97224 9.32619 3.6699C9.98029 3.36756 10.7082 3.25537 11.4246 3.34647C12.141 3.43757 12.8162 3.7282 13.3712 4.1843L13.2636 4.25305L9.21563 6.55305C9.11158 6.60765 9.02504 6.68981 8.96573 6.79029C8.90642 6.89076 8.87669 7.00557 8.87989 7.1218V12.7218ZM9.80476 10.753L11.9966 9.50305L14.1948 10.753V13.253L11.9966 14.503L9.79843 13.253L9.80476 10.753Z"></path>
+                </mask>
+                <path d="M20.6816 10.1843C20.9588 9.34066 21.0063 8.4399 20.8192 7.57245C20.6321 6.70499 20.217 5.90134 19.6157 5.24216C19.0143 4.58298 18.2478 4.09146 17.393 3.81692C16.5382 3.54238 15.6253 3.49449 14.7459 3.67805C14.1453 3.01747 13.379 2.52468 12.524 2.24931C11.669 1.97394 10.7555 1.92571 9.87559 2.10947C8.99568 2.29324 8.18039 2.70252 7.51181 3.29608C6.84323 3.88965 6.34499 4.64654 6.06725 5.49055C5.18642 5.67292 4.3699 6.08122 3.70003 6.67426C3.03017 7.26731 2.53064 8.02413 2.25182 8.86842C1.97299 9.71271 1.92474 10.6146 2.11192 11.4832C2.2991 12.3517 2.71509 13.1562 3.31795 13.8155C3.09309 14.4899 3.01633 15.2037 3.09278 15.9095C3.16924 16.6154 3.39716 17.2971 3.76139 17.9093C4.30169 18.8351 5.12567 19.568 6.11483 20.0027C7.104 20.4373 8.20738 20.5512 9.26631 20.328C9.74353 20.8568 10.3291 21.2796 10.9844 21.5684C11.6396 21.8571 12.3495 22.0053 13.0672 22.003C14.1516 22.003 15.2081 21.6635 16.0847 21.0334C16.9612 20.4034 17.6125 19.5152 17.9449 18.4968C18.649 18.3539 19.3141 18.0649 19.8962 17.6489C20.4784 17.233 20.9642 16.6997 21.3214 16.0843C21.8585 15.1598 22.0858 14.0915 21.9709 13.032C21.856 11.9724 21.4048 10.9758 20.6816 10.1843ZM13.0798 20.6968C12.191 20.6968 11.3302 20.3894 10.6473 19.828L10.7677 19.7593L14.8029 17.4593C14.9069 17.4047 14.9935 17.3225 15.0528 17.2221C15.1121 17.1216 15.1418 17.0068 15.1386 16.8905V11.2655L16.8427 12.2405C16.8517 12.2441 16.8594 12.2501 16.865 12.2579C16.8706 12.2656 16.8739 12.2748 16.8744 12.2843V16.9343C16.876 17.4289 16.7785 17.9189 16.5875 18.3761C16.3964 18.8333 16.1156 19.2488 15.7611 19.5985C15.4067 19.9482 14.9856 20.2253 14.5222 20.4138C14.0588 20.6023 13.5621 20.6984 13.0608 20.6968H13.0798ZM4.90165 17.2593C4.46164 16.5029 4.3026 15.6189 4.45188 14.7593L4.57224 14.828L8.60749 17.128C8.70379 17.1829 8.81303 17.2118 8.92423 17.2118C9.03543 17.2118 9.14467 17.1829 9.24097 17.128L14.1758 14.3218V16.253C14.1797 16.2608 14.1817 16.2694 14.1817 16.278C14.1817 16.2867 14.1797 16.2953 14.1758 16.303L10.0962 18.628C9.66403 18.8748 9.18685 19.0352 8.69188 19.0999C8.19692 19.1647 7.69387 19.1326 7.21148 19.0055C6.72909 18.8784 6.27681 18.6587 5.88048 18.3591C5.48415 18.0595 5.15154 17.6858 4.90165 17.2593ZM3.83741 8.5843C4.28764 7.82089 4.99655 7.23878 5.83919 6.94055V11.6718C5.83595 11.7857 5.86434 11.8983 5.92128 11.9975C5.97823 12.0966 6.06156 12.1785 6.16227 12.2343L11.0717 15.028L9.36766 16.003C9.34918 16.0092 9.32914 16.0092 9.31065 16.003L5.23106 13.678C4.36041 13.1812 3.72487 12.3642 3.46364 11.4059C3.20242 10.4476 3.33682 9.42624 3.83741 8.56555V8.5843ZM17.8563 11.7968L12.9278 8.9718L14.6319 8.00305C14.6403 7.99741 14.6502 7.99439 14.6604 7.99439C14.6705 7.99439 14.6805 7.99741 14.6889 8.00305L18.7685 10.328C19.3915 10.684 19.8992 11.2072 20.2325 11.8368C20.5659 12.4664 20.7111 13.1764 20.6514 13.8843C20.5916 14.5921 20.3294 15.2687 19.8951 15.8352C19.4608 16.4017 18.8724 16.8349 18.1983 17.0843V12.353C18.1946 12.2391 18.1612 12.1281 18.1013 12.0306C18.0414 11.9332 17.957 11.8527 17.8563 11.7968ZM19.554 9.2968L19.4336 9.2218L15.4047 6.9093C15.3047 6.84846 15.1896 6.81624 15.0721 6.81624C14.9547 6.81624 14.8395 6.84846 14.7396 6.9093L9.8111 9.71555V7.75305C9.8061 7.7445 9.80346 7.7348 9.80346 7.72492C9.80346 7.71505 9.8061 7.70535 9.8111 7.6968L13.897 5.37805C14.5222 5.02257 15.2371 4.85003 15.958 4.88059C16.6789 4.91115 17.3762 5.14356 17.9682 5.55064C18.5601 5.95772 19.0225 6.52265 19.301 7.17939C19.5796 7.83614 19.663 8.55755 19.5413 9.2593L19.554 9.2968ZM8.87989 12.7218L7.1695 11.753C7.15339 11.7405 7.1422 11.7228 7.13782 11.703V7.06555C7.13785 6.35289 7.34371 5.65499 7.73128 5.0536C8.11885 4.45222 8.67209 3.97224 9.32619 3.6699C9.98029 3.36756 10.7082 3.25537 11.4246 3.34647C12.141 3.43757 12.8162 3.7282 13.3712 4.1843L13.2636 4.25305L9.21563 6.55305C9.11158 6.60765 9.02504 6.68981 8.96573 6.79029C8.90642 6.89076 8.87669 7.00557 8.87989 7.1218V12.7218ZM9.80476 10.753L11.9966 9.50305L14.1948 10.753V13.253L11.9966 14.503L9.79843 13.253L9.80476 10.753Z" fill="#828282"></path>
+                <path d="M20.6816 10.1843C20.9588 9.34066 21.0063 8.4399 20.8192 7.57245C20.6321 6.70499 20.217 5.90134 19.6157 5.24216C19.0143 4.58298 18.2478 4.09146 17.393 3.81692C16.5382 3.54238 15.6253 3.49449 14.7459 3.67805C14.1453 3.01747 13.379 2.52468 12.524 2.24931C11.669 1.97394 10.7555 1.92571 9.87559 2.10947C8.99568 2.29324 8.18039 2.70252 7.51181 3.29608C6.84323 3.88965 6.34499 4.64654 6.06725 5.49055C5.18642 5.67292 4.3699 6.08122 3.70003 6.67426C3.03017 7.26731 2.53064 8.02413 2.25182 8.86842C1.97299 9.71271 1.92474 10.6146 2.11192 11.4832C2.2991 12.3517 2.71509 13.1562 3.31795 13.8155C3.09309 14.4899 3.01633 15.2037 3.09278 15.9095C3.16924 16.6154 3.39716 17.2971 3.76139 17.9093C4.30169 18.8351 5.12567 19.568 6.11483 20.0027C7.104 20.4373 8.20738 20.5512 9.26631 20.328C9.74353 20.8568 10.3291 21.2796 10.9844 21.5684C11.6396 21.8571 12.3495 22.0053 13.0672 22.003C14.1516 22.003 15.2081 21.6635 16.0847 21.0334C16.9612 20.4034 17.6125 19.5152 17.9449 18.4968C18.649 18.3539 19.3141 18.0649 19.8962 17.6489C20.4784 17.233 20.9642 16.6997 21.3214 16.0843C21.8585 15.1598 22.0858 14.0915 21.9709 13.032C21.856 11.9724 21.4048 10.9758 20.6816 10.1843ZM13.0798 20.6968C12.191 20.6968 11.3302 20.3894 10.6473 19.828L10.7677 19.7593L14.8029 17.4593C14.9069 17.4047 14.9935 17.3225 15.0528 17.2221C15.1121 17.1216 15.1418 17.0068 15.1386 16.8905V11.2655L16.8427 12.2405C16.8517 12.2441 16.8594 12.2501 16.865 12.2579C16.8706 12.2656 16.8739 12.2748 16.8744 12.2843V16.9343C16.876 17.4289 16.7785 17.9189 16.5875 18.3761C16.3964 18.8333 16.1156 19.2488 15.7611 19.5985C15.4067 19.9482 14.9856 20.2253 14.5222 20.4138C14.0588 20.6023 13.5621 20.6984 13.0608 20.6968H13.0798ZM4.90165 17.2593C4.46164 16.5029 4.3026 15.6189 4.45188 14.7593L4.57224 14.828L8.60749 17.128C8.70379 17.1829 8.81303 17.2118 8.92423 17.2118C9.03543 17.2118 9.14467 17.1829 9.24097 17.128L14.1758 14.3218V16.253C14.1797 16.2608 14.1817 16.2694 14.1817 16.278C14.1817 16.2867 14.1797 16.2953 14.1758 16.303L10.0962 18.628C9.66403 18.8748 9.18685 19.0352 8.69188 19.0999C8.19692 19.1647 7.69387 19.1326 7.21148 19.0055C6.72909 18.8784 6.27681 18.6587 5.88048 18.3591C5.48415 18.0595 5.15154 17.6858 4.90165 17.2593ZM3.83741 8.5843C4.28764 7.82089 4.99655 7.23878 5.83919 6.94055V11.6718C5.83595 11.7857 5.86434 11.8983 5.92128 11.9975C5.97823 12.0966 6.06156 12.1785 6.16227 12.2343L11.0717 15.028L9.36766 16.003C9.34918 16.0092 9.32914 16.0092 9.31065 16.003L5.23106 13.678C4.36041 13.1812 3.72487 12.3642 3.46364 11.4059C3.20242 10.4476 3.33682 9.42624 3.83741 8.56555V8.5843ZM17.8563 11.7968L12.9278 8.9718L14.6319 8.00305C14.6403 7.99741 14.6502 7.99439 14.6604 7.99439C14.6705 7.99439 14.6805 7.99741 14.6889 8.00305L18.7685 10.328C19.3915 10.684 19.8992 11.2072 20.2325 11.8368C20.5659 12.4664 20.7111 13.1764 20.6514 13.8843C20.5916 14.5921 20.3294 15.2687 19.8951 15.8352C19.4608 16.4017 18.8724 16.8349 18.1983 17.0843V12.353C18.1946 12.2391 18.1612 12.1281 18.1013 12.0306C18.0414 11.9332 17.957 11.8527 17.8563 11.7968ZM19.554 9.2968L19.4336 9.2218L15.4047 6.9093C15.3047 6.84846 15.1896 6.81624 15.0721 6.81624C14.9547 6.81624 14.8395 6.84846 14.7396 6.9093L9.8111 9.71555V7.75305C9.8061 7.7445 9.80346 7.7348 9.80346 7.72492C9.80346 7.71505 9.8061 7.70535 9.8111 7.6968L13.897 5.37805C14.5222 5.02257 15.2371 4.85003 15.958 4.88059C16.6789 4.91115 17.3762 5.14356 17.9682 5.55064C18.5601 5.95772 19.0225 6.52265 19.301 7.17939C19.5796 7.83614 19.663 8.55755 19.5413 9.2593L19.554 9.2968ZM8.87989 12.7218L7.1695 11.753C7.15339 11.7405 7.1422 11.7228 7.13782 11.703V7.06555C7.13785 6.35289 7.34371 5.65499 7.73128 5.0536C8.11885 4.45222 8.67209 3.97224 9.32619 3.6699C9.98029 3.36756 10.7082 3.25537 11.4246 3.34647C12.141 3.43757 12.8162 3.7282 13.3712 4.1843L13.2636 4.25305L9.21563 6.55305C9.11158 6.60765 9.02504 6.68981 8.96573 6.79029C8.90642 6.89076 8.87669 7.00557 8.87989 7.1218V12.7218ZM9.80476 10.753L11.9966 9.50305L14.1948 10.753V13.253L11.9966 14.503L9.79843 13.253L9.80476 10.753Z" stroke="#828282" stroke-width="0.2" mask="url(#path-1-outside-1_3606_3145)"></path>
+            </svg></div>
+        <div id="yt_article_summary_close_button" class="yt_article_summary_close_button">×</div>
+    </div></body></html>
